@@ -1,13 +1,21 @@
-
+'use client'
 import React from 'react'
 
-const home = () => {
-  return (
-    <main className='relative bg-black-100 flex justify-center items-center flex-col overflow-hidden mx-auto sm:px-10 px-5'>
-      <div className='max-w-7xl w-full'>
+import { useRouter } from 'next/navigation'
 
-      </div>
-    </main>
+const home = () => {
+  const router = useRouter()
+
+  const navigate = (page) => {
+    router.push(page)
+  }
+
+  return (
+    <section>
+      <h1>useRouter</h1>
+      <button className='border px-2 py-4' onClick={() => navigate('about')}>Go to About Page</button>
+      <button className='border px-2 py-4' onClick={() => navigate('login')}>Go to Login Page</button>
+    </section>
   )
 }
 
