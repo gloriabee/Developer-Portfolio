@@ -2,6 +2,7 @@ import React from 'react'
 import Hero from './components/Hero'
 import { FloatingNav } from './components/ui/FloatingNav'
 import { FaHome } from 'react-icons/fa'
+import Grid from './components/Grid'
 
 
 const home = () => {
@@ -10,6 +11,7 @@ const home = () => {
       <div className='max-w-7xl w-full'>
         <FloatingNav className="" navItems={[{ name: 'Home', link: '/', icon: <FaHome /> }]} />
         <Hero />
+        <Grid />
       </div>
     </main>
   )
